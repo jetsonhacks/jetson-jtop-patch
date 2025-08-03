@@ -53,7 +53,7 @@ sudo patch "$JTOP_SCRIPT_PATH" < "$PATCH_FILE"
 if [ $? -eq 0 ]; then
     echo "Patch applied successfully!"
     echo "--------------------------------------------------------"
-    echo "IMPORTANT: Please reboot your Jetson Orin Nano for the changes to take effect."
+    echo "IMPORTANT: Please reboot your Jetson for the changes to take effect."
     echo "You can do this by running: 'sudo reboot'"
 else
     echo "Error: Failed to apply the patch."
