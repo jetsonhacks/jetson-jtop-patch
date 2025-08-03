@@ -25,10 +25,14 @@ else
     echo "Verified jtop version: $CURRENT_VERSION. Applying patch..."
 fi
 
-# Dynamically find the path to the jtop Python script
-# This handles different Python versions (e.g., python3.8, python3.10)
+# Dynamically find the path to the jtop Python script using pathlib
+# This recursively searches the entire jtop package directory for the file.
 echo "Searching for '$JTOP_FILENAME' in the Python installation directories..."
-JTOP_SCRIPT_PATH=$(python3 -c "import jtop, os; print(os.path.join(os.path.dirname(jtop.__file__), '$JTOP_FILENAME'))")
+
+JTOP_SCRIPT_PATH=$(python3 -c "import jtop, pathlib;
+jtop_dir = pathlib.Path(jtop.__file__).parent;
+file_path = next(jtop_dir.rglob('$JTOP_FILENAME'));
+print(file_path)" 2>/dev/null)
 
 if [ -f "$JTOP_SCRIPT_PATH" ]; then
     echo "Found jtop script at: $JTOP_SCRIPT_PATH"
@@ -49,7 +53,7 @@ sudo patch "$JTOP_SCRIPT_PATH" < "$PATCH_FILE"
 if [ $? -eq 0 ]; then
     echo "Patch applied successfully!"
     echo "--------------------------------------------------------"
-    echo "IMPORTANT: Please reboot your Jetson Orin for the changes to take effect."
+    echo "IMPORTANT: Please reboot your Jetson Orin Nano for the changes to take effect."
     echo "You can do this by running: 'sudo reboot'"
 else
     echo "Error: Failed to apply the patch."
