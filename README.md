@@ -18,7 +18,7 @@ This repository contains two key files:
 
 1.  **Clone the repository and apply fix**
     ```bash
-    git clone https://github.com/jetsonhacks/jtop-jetpack-fix.git
+    git clone https://github.com/jetsonhacks/jetson-jtop-patch.git
     cd jtop-jetpack-fix
     chmod +x apply_jtop_fix.sh
     ./apply_jtop_fix.sh
