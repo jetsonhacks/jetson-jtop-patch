@@ -1,6 +1,6 @@
 # jetson-jtop-patch
 
-A patch to resolve the "Jetpack not installed" issue in `jtop` version 4.3.2 on the Jetson Orin when JetPack 6.2.1 or JetPack 5.1.5 is installed.
+A patch to resolve the "Jetpack not installed" issue in `jtop` version 4.3.2 on the Jetson Orin when JetPack 6.2.1 or JetPack 5.1.5 is installed. This should be a temporary fix until Jtop gets updated.
 
 ## The Problem
 
@@ -46,3 +46,7 @@ ORIGINAL_PATH=$(python3 -c "import jtop, os; print(os.path.join(os.path.dirname(
 
 # Run the diff command to create the patch file
 diff -u $ORIGINAL_PATH ~/jetson_variables_new.py > jtop_patch.diff
+```
+## Release Notes
+### August 3, 2025
+* Initial Release
