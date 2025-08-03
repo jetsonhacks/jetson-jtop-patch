@@ -1,6 +1,6 @@
 # jetson-jtop-patch
 
-A patch to resolve the "Jetpack not installed" issue in `jtop` version 4.3.2 on the Jetson Orin when JetPack 6.2.1 or JetPack 5.1.5 is installed. This should be a temporary fix until Jtop gets updated.
+A patch to resolve the "Jetpack NOT DETECTED" issue in `jtop` version 4.3.2 on the Jetson Orin when JetPack 6.2.1 or JetPack 5.1.5 is installed. This should be a temporary fix until Jtop gets updated.
 
 ## The Problem
 
