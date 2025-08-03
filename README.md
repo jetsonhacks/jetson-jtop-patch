@@ -4,7 +4,7 @@ A patch to resolve the "Jetpack NOT DETECTED" issue in `jtop` version 4.3.2 on t
 
 ## The Problem
 
-When running `jtop` on a Jetson Orin Nano with a specific `jetson-stats` configuration, users may encounter a message that says "Jetpack not installed" on the main dashboard. This is due to a known issue in `jtop` version `4.3.2` where the script that determines the Jetpack version is not compatible with the Orin Nano's system.
+When running `jtop` on a Jetson with a specific `jetson-stats` configuration, users may encounter a message that says "Jetpack not installed" on the main dashboard. This is due to a known issue in `jtop` version `4.3.2` where the script that determines the Jetpack version does not know about a new vesion of JetPack.
 
 This repository provides a simple, automated fix for this problem.
 
