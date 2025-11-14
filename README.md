@@ -1,3 +1,7 @@
+# November, 2025
+
+jtop has been updated, and is now being actively maintained. Therefore, this patch is no longer needed, and should not be installed.
+
 # jetson-jtop-patch
 
 A patch to resolve the "Jetpack NOT DETECTED" issue in `jtop` version 4.3.2 on the Jetson Orin when JetPack 6.2.1 or JetPack 5.1.5 is installed. This should be a temporary fix until Jtop gets updated.
